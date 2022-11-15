@@ -77,8 +77,10 @@ public class RazaService {
                  System.out.println("ingrese la raza que quiere eliminar: ");
                  String razaEliminar = leer.next();
                 
+               
                  Raza m = listaRaza.get(i);
-                listaRaza.remove(m);
+                 listaRaza.remove(m);
+                 
             } else {
                 break;
             }

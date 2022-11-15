@@ -16,7 +16,7 @@ import java.util.Scanner;
  *
  * @author NALDO
  */
-public class ejercicio2 {
+public class ejercicio3 {
 
     /**
      * Crear una clase llamada Alumno que mantenga información sobre las notas de distintos
@@ -34,15 +34,19 @@ alumnos.
         System.out.println("ingrese el nombre del alumno para calcular su nota final:");
         String name = leer.next();
 
+        boolean flag=true;
         for (int i = 0; i < listAlumnos.size(); i++) {
 
             if (listAlumnos.get(i).getNombre().equals(name)) {
                 System.out.println( a1.notaFinal(name, listAlumnos));
-            }else{
-                System.out.println("el nombre ingresado, NO ES UN ALUMNO");
+               flag=false;
             }
         
 
+        }
+        
+        if (flag){
+             System.out.println(name+" NO SE ENCUENTRA EN EL LISTADO");
         }
 
     }

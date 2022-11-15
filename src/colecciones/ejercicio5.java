@@ -5,14 +5,15 @@
  */
 package colecciones;
 
-import Service.RazaService;
+
+import Service.NacionalidadService;
 
 
 /**
  *
  * @author NALDO
  */
-public class ejercicio1 {
+public class ejercicio5 {
 
     /**
      * @param args the command line arguments
@@ -20,11 +21,10 @@ public class ejercicio1 {
     public static void main(String[] args) {
         // TODO code application logic here
         
-        RazaService r2 = new RazaService();
-        r2.crearR();
-        r2.mostrar();
-        r2.eliminar();
-        
+        NacionalidadService n1 = new NacionalidadService();
+        n1.ingresarPais();
+        n1.eliminarPais();
+        n1.ListActual();
     }
     
 }

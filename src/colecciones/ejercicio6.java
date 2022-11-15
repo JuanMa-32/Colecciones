@@ -5,26 +5,23 @@
  */
 package colecciones;
 
-import Service.RazaService;
-
+import Service.TiendaService;
 
 /**
  *
  * @author NALDO
  */
-public class ejercicio1 {
+public class ejercicio6 {
 
     /**
      * @param args the command line arguments
+     * 
      */
     public static void main(String[] args) {
         // TODO code application logic here
         
-        RazaService r2 = new RazaService();
-        r2.crearR();
-        r2.mostrar();
-        r2.eliminar();
-        
+        TiendaService catalogo = new TiendaService();
+        catalogo.menu();
     }
     
 }

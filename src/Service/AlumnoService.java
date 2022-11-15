@@ -23,8 +23,7 @@ promedio final, devuelto por el método y mostrado en el main.
 public class AlumnoService {
     
     Scanner leer = new Scanner (System.in).useDelimiter("\n");
-   // ArrayList <Alumno> listAlumnos = new ArrayList();
-   // Alumno n1 = new Alumno();
+  
     
     
     public ArrayList<Alumno> crearAlum(){
@@ -34,16 +33,19 @@ public class AlumnoService {
            boolean flag = true;
         
         do {
-            
+           // Alumno n1 = new Alumno(); FORMA2 usando un objeto para settear valores
              ArrayList <Integer> aux = new ArrayList();
             System.out.println("ingresar Nombre: ");
+            //n1.setNombre(leer.next());
             String name = leer.next();
 
             System.out.println("Ingrese sus 3 Notas:");
             for (int i = 0; i < 3; i++) {
                 aux.add(leer.nextInt());
+                //n1.setNotas(aux); setteo notas con lista auxiliar
 
             }
+            //listAlumnos.add(n1);  añado a mi lista el objeto
 
             listAlumnos.add(new Alumno(name, aux));
 
@@ -79,14 +81,14 @@ public class AlumnoService {
         
         
         for (int i = 0; i < listAlumnos.size(); i++) {
-
+            
             if (listAlumnos.get(i).getNombre().equals(name)) {
                 for (int j = 0; j < listAlumnos.get(i).getNotas().size(); j++) {
                     aux = listAlumnos.get(i).getNotas();
                     n += aux.get(j);
                 }
             }
-
+           
         }
 
         return n / 3;

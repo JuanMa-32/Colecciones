@@ -21,7 +21,7 @@ public class Alumno {
     private ArrayList<Integer> notas;
 
     public Alumno() {
-        this.notas=new ArrayList();
+        notas=new ArrayList();
     }
 
     public Alumno(String nombre, ArrayList<Integer> notas) {
