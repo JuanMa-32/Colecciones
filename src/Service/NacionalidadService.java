@@ -6,14 +6,18 @@
 package Service;
 
 import Entidades.Nacionalidad;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashSet;
 
 
 
 
 import java.util.Iterator;
+import java.util.List;
 import java.util.Scanner;
 import java.util.Set;
-import java.util.TreeSet;
+
 
 /**
  *
@@ -22,7 +26,7 @@ import java.util.TreeSet;
 public class NacionalidadService {
     
     Scanner leer = new Scanner (System.in).useDelimiter("\n");
-    Set<Nacionalidad> paises= new TreeSet(); 
+    Set<Nacionalidad> paises= new HashSet(); 
         
     public void ingresarPais(){
   
@@ -40,15 +44,12 @@ public class NacionalidadService {
             
         }while(flag.equalsIgnoreCase("S"));
         
+        
         System.out.println("TODOS LOS PAISES INGRESADOS:");
         for (Nacionalidad var : paises) {
             System.out.println(var);
         }
- 
-        
-        
-     
-     
+
     }
     
     public void eliminarPais(){
@@ -74,7 +75,9 @@ public class NacionalidadService {
     public void ListActual(){
         
         System.out.println("LISTA FINAL: ");
-        for (Nacionalidad var : paises) {
+        List <Nacionalidad> listOrdenada = new ArrayList(paises);
+        Collections.sort(listOrdenada);
+        for (Nacionalidad var : listOrdenada) {
             System.out.println(var);
         }
     }

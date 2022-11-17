@@ -5,6 +5,8 @@
  */
 package Entidades;
 
+import java.util.Objects;
+
 /**
  *
  * @author NALDO
@@ -33,10 +35,35 @@ public class Nacionalidad implements Comparable<Nacionalidad> {
         return "  PAIS= " + pais;
     }
 
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Nacionalidad other = (Nacionalidad) obj;
+        if (!Objects.equals(this.pais, other.pais)) {
+            return false;
+        }
+        return true;
+    }
+
     
+
     @Override
     public int compareTo(Nacionalidad t) {
         return this.pais.compareTo(t.getPais());
     }
-
+    
 }

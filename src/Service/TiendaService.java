@@ -48,15 +48,30 @@ Realizar un menú para lograr todas las acciones previamente mencionadas.
     public void modificarPrecio(){
         
         System.out.println("ingrese el producto para modificar su precio: ");
-        String cambio = leer.next();
-        
-        if (productos.containsKey(cambio)){
-            System.out.println("NUEVO PRECIO: ");
+        String producto = leer.next();
+      /**
+          System.out.println("NUEVO PRECIO: ");
             int newPrecio=leer.nextInt();
-            productos.replace(cambio, newPrecio);
+          productos.replace(cambio, newPrecio);
+         */
+        /**
+         System.out.println("NUEVO PRECIO: ");
+            int newPrecio=leer.nextInt();
+        if(productos.replace(cambio, newPrecio) != null){
+            System.out.println("cambio realizado");
+        }else{
+            System.out.println("no se encontro la key");
+        }
+          */
+      
+        if (productos.containsKey(producto)){
+            System.out.println("NUEVO ky: ");
+            int newPrecio=leer.nextInt();
+            productos.replace(producto, newPrecio);
         }else{
             System.out.println("este producto no esta en la lista");
         }
+     
     }
     
     public void eliminarProducto(){
